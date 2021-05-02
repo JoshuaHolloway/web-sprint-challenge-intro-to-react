@@ -1,5 +1,6 @@
 # Intro to React Sprint Challenge
 
+##
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
 This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **introductory React**. During this sprint, you studied **React components and advanced styling**.
@@ -47,11 +48,11 @@ Your finished project must include all of the following requirements:
 * [ ] Render your characters to the DOM:
 
   1. Build a React component named 'Character' to render an individual character.
-  1. Map over the list in state, and for each character render a Character to the page.
-  1. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
-  1. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
-  1. The components must be styled with **styled-components**.
-
+  2. Map over the list in state, and for each character render a Character to the page.
+  3. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
+  4. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
+  5. The components must be styled with **styled-components**.
+####
   **Notes:**
 
 * Data obtained from the endpoint using browser-run JavaScript is mocked with [msw](https://github.com/mswjs/msw).

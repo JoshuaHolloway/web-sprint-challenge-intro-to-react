@@ -11,6 +11,7 @@ afterEach(() => {
   document.body.innerHTML = "";
 });
 
+
 describe("<App />", () => {
   test("[2] Luke Skywalker eventually appears in the DOM", async () => {
     render(<App />);

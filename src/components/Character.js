@@ -1,50 +1,40 @@
 import React from "react";
 import styled from 'styled-components';
 
-// Write your Character component here
-const WrapperDiv = styled.div`
-  /* padding: 20px; */
+const Container = styled.div`
   display: grid;
-  /* gap: 10px; */
-
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows:    repeat(5, 1fr);
-
-  /* @media screen and (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat( calc( 100 / 2 ), 1fr);
-  } */
-
-  width: 100%;
-
-  border: solid 1px hotpink;
+  grid-template-columns: repeat(5, 1fr);
+  border: solid darkorchid 5px;
 `;
 
-const Container = styled.div`
-  width: 100%;
-  border: dashed darkorchid 1px;
+const P = styled.p`
+  /* height: 100%; */
+  width:  100%;
+  border: dashed hotpink 1px;
+  &.name {
+    font-size: 20px;
+  }
+
 `;
 
 const Character = ({datum}) => {
 
-  console.log('Character: ', datum);
-
   return (
-    <WrapperDiv>
-      <Container><p>{datum.name}</p></Container>
-      <Container><p>{datum.height}</p></Container>
-      <Container><p>{datum.mass}</p></Container>
-      <Container><p>{datum.hair_color}</p></Container>
-      <Container><p>{datum.skin_color}</p></Container>
-      <Container><p>{datum.birth_year}</p></Container>
-      <Container><p>{datum.eye_color}</p></Container>
-      <Container><p>{datum.films.map((film) => film)}</p></Container>
-      <Container><p>{datum.gender}</p></Container>
-      <Container><p>{datum.homeworld}</p></Container>
-      <Container><p>{datum.starships.map((x) => x)}</p></Container>
-      <Container><p>{datum.species.map((x) => x)}</p></Container>
-      <Container><p>{datum.vehicles.map((x) => x)}</p></Container>
-    </WrapperDiv>
+    <Container>
+      <P className="name">{datum.name}</P>
+      <P className="height">{datum.height}</P>
+      <P chassName="mass">{datum.mass}</P>
+      <P chassName="hair">{datum.hair_color}</P>
+      <P chassName="skin">{datum.skin_color}</P>
+      <P chassName="birth">{datum.birth_year}</P>
+      <P chassName="eyes">{datum.eye_color}</P>
+      <P chassName="films">{datum.films.map((film) => film)}</P>
+      <P chassName="gender">{datum.gender}</P>
+      <P chassName="world">{datum.homeworld}</P>
+      <P chassName="ships">{datum.starships.map((x) => x)}</P>
+      <P chassName="species">{datum.species.map((x) => x)}</P>
+      <P chassName="vehicles">{datum.vehicles.map((x) => x)}</P>
+    </Container>
   );
 };
 

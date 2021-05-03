@@ -1,6 +1,6 @@
 import React from 'react';
-// import Character from './components/Character.js'
-import TestDiv from './components/TestDiv.js';
+import Character from './components/Character.js'
+// import TestDiv from './components/Character.js';
 import useHook from './helper/hook.js';
 import './App.css';
 import styled from 'styled-components';
@@ -88,7 +88,7 @@ const App = () => {
         <p className="char-num"><span>Character 6</span></p>
 
         <D className="info">
-          { data && <TestDiv datum={
+          { data && <Character datum={
             {
               "name": "name",
               "height": "height",
@@ -113,7 +113,7 @@ const App = () => {
         { data && data.map((datum, idx) => {
           return (
             <D className={`char-${idx+1}`}>
-              <TestDiv datum={datum}/>
+              <Character datum={datum}/>
             </D>
           );
         }) }
